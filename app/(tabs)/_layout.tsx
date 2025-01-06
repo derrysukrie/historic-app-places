@@ -13,8 +13,12 @@ export default function TabLayout() {
 
   return (
     <Tabs
+      detachInactiveScreens
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
+        sceneStyle: {
+           backgroundColor: "#fff"
+        },
         headerShown: false,
         tabBarButton: HapticTab,
         tabBarBackground: TabBarBackground,
