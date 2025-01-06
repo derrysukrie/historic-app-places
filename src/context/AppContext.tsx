@@ -1,7 +1,7 @@
 import React, { createContext, useState, ReactNode } from "react";
 import { historicalPlaces } from "../db/data";
 
-interface HistoricalPlace {
+export type HistoricalPlace = {
   id: number;
   name: string;
   location: {
