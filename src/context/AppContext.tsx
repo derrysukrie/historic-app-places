@@ -13,6 +13,7 @@ interface HistoricalPlace {
     region: string;
     nearest_city: string;
   };
+  image: string;
   description: string;
   established: string;
   type: string;
@@ -27,7 +28,10 @@ interface HistoricalPlacesContextType {
 }
 
 // @ Create the Context
-const HistoricalPlacesContext = createContext<HistoricalPlacesContextType | undefined>(undefined);
+export const HistoricalPlacesContext = createContext<HistoricalPlacesContextType>({
+    places: [],
+    toggleVisited: () => {},
+});
 
 export const AppProvider = ({ children }: { children: ReactNode }) => {
   const [places, setPlaces] = useState<HistoricalPlace[]>(historicalPlaces);

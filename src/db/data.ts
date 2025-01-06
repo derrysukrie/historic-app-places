@@ -10,6 +10,7 @@ interface HistoricalPlace {
     region: string;
     nearest_city: string;
   };
+  image: string;
   description: string;
   established: string;
   type: string;
@@ -30,6 +31,7 @@ export const historicalPlaces: HistoricalPlace[] = [
       region: "Beijing to Gansu",
       nearest_city: "Beijing",
     },
+    image: "https://www.wanderlustmagazine.com/wp-content/uploads/2023/11/5-1-scaled.jpg",
     description: "An ancient series of walls and fortifications built to protect China from invasions.",
     established: "7th Century BC",
     type: "Fortification",
@@ -48,6 +50,7 @@ export const historicalPlaces: HistoricalPlace[] = [
       region: "Cusco Region",
       nearest_city: "Aguas Calientes",
     },
+    image: "https://www.wanderlustmagazine.com/wp-content/uploads/2023/11/5-1-scaled.jpg",
     description: "A 15th-century Inca citadel located on a mountain ridge.",
     established: "1450",
     type: "Citadel",
@@ -66,6 +69,7 @@ export const historicalPlaces: HistoricalPlace[] = [
       region: "Uttar Pradesh",
       nearest_city: "Agra",
     },
+    image: "https://www.wanderlustmagazine.com/wp-content/uploads/2023/11/5-1-scaled.jpg",
     description: "A white marble mausoleum built by Mughal Emperor Shah Jahan.",
     established: "1632",
     type: "Mausoleum",
@@ -84,6 +88,7 @@ export const historicalPlaces: HistoricalPlace[] = [
       region: "Lazio",
       nearest_city: "Rome",
     },
+    image: "",
     description: "An ancient amphitheater known for gladiatorial contests.",
     established: "80 AD",
     type: "Amphitheater",
@@ -102,6 +107,7 @@ export const historicalPlaces: HistoricalPlace[] = [
       region: "Ma'an Governorate",
       nearest_city: "Wadi Musa",
     },
+    image: "",
     description: "An archaeological city famous for its rock-cut architecture.",
     established: "312 BC",
     type: "Archaeological Site",
@@ -120,6 +126,7 @@ export const historicalPlaces: HistoricalPlace[] = [
       region: "Giza",
       nearest_city: "Cairo",
     },
+    image: "",
     description: "Ancient Egyptian pyramids and the Great Sphinx.",
     established: "2600 BC",
     type: "Tomb",
@@ -138,6 +145,7 @@ export const historicalPlaces: HistoricalPlace[] = [
       region: "Siem Reap",
       nearest_city: "Siem Reap",
     },
+    image: "",
     description: "The largest religious monument in the world.",
     established: "12th Century",
     type: "Temple Complex",
@@ -156,6 +164,7 @@ export const historicalPlaces: HistoricalPlace[] = [
       region: "Wiltshire",
       nearest_city: "Salisbury",
     },
+    image: "",
     description: "A prehistoric monument of standing stones.",
     established: "3000 BC",
     type: "Monument",
@@ -174,6 +183,7 @@ export const historicalPlaces: HistoricalPlace[] = [
       region: "Andalusia",
       nearest_city: "Granada",
     },
+    image: "",
     description: "A palace and fortress complex from the Nasrid dynasty.",
     established: "13th Century",
     type: "Palace Complex",
@@ -192,6 +202,7 @@ export const historicalPlaces: HistoricalPlace[] = [
       region: "Yucatan",
       nearest_city: "Valladolid",
     },
+    image: "",
     description: "A large pre-Columbian archaeological site.",
     established: "600 AD",
     type: "Archaeological Site",
