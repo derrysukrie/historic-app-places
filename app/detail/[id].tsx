@@ -10,12 +10,16 @@ import { useContext } from "react";
 
 export default function Page() {
   const { data } = useLocalSearchParams<{ data: string }>();
-  const { places } = useContext(HistoricalPlacesContext);
+  const { places, setUnvisited } = useContext(HistoricalPlacesContext);
   const placeDetail = places[Number(data)];
   
   const toWiki = () => {
     Linking.openURL(placeDetail.link);
   };
+
+  const handleUnvisited = () => {
+    setUnvisited(placeDetail.id);
+  }
 
   return (
     <ParallaxScrollView
@@ -44,7 +48,7 @@ export default function Page() {
       <ScrollView horizontal>
         <ThemedText type="default">Status: {placeDetail.status}</ThemedText>
       </ScrollView>
-      <Button title="Mark place as visited"></Button>
+      <Button onPress={handleUnvisited} title="Mark place as un visited"></Button>
     </ParallaxScrollView>
   );
 }

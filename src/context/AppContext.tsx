@@ -26,12 +26,14 @@ export type HistoricalPlace = {
 interface HistoricalPlacesContextType {
   places: HistoricalPlace[];
   toggleVisited: (placeId: number) => void;
+  setUnvisited: (placeId: number) => void;
 }
 
 // @ Create the Context
 export const HistoricalPlacesContext = createContext<HistoricalPlacesContextType>({
     places: [],
     toggleVisited: () => {},
+    setUnvisited: () => {},
 });
 
 export const AppProvider = ({ children }: { children: ReactNode }) => {
@@ -42,5 +44,9 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
     setPlaces((prevPlaces) => prevPlaces.map((place) => (place.id === placeId ? { ...place, visited: true } : place)));
   };
 
-  return <HistoricalPlacesContext.Provider value={{ places, toggleVisited }}>{children}</HistoricalPlacesContext.Provider>;
+  const setUnvisited = (placeId: number) => {
+    setPlaces((prevPlaces) => prevPlaces.map((place) => (place.id === placeId ? { ...place, visited: false } : place)));
+  };
+
+  return <HistoricalPlacesContext.Provider value={{ places, toggleVisited, setUnvisited }}>{children}</HistoricalPlacesContext.Provider>;
 };
