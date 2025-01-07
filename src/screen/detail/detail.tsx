@@ -1,4 +1,4 @@
-import { StyleSheet, View, Linking, Pressable, Button } from "react-native";
+import { StyleSheet, View, Linking, Pressable, Button, Alert } from "react-native";
 
 import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { ThemedText } from "@/components/ThemedText";
@@ -8,6 +8,7 @@ import { HistoricalPlacesContext } from "@/src/context/AppContext";
 import { Image } from "expo-image";
 import { useContext } from "react";
 import { Recommendation } from "./components/recommendation";
+import * as Clipboard from 'expo-clipboard';
 
 export default function DetailPage() {
   const { data } = useLocalSearchParams<{ data: string }>();
@@ -22,6 +23,11 @@ export default function DetailPage() {
   const handleUnvisited = () => {
     setUnvisited(placeDetail.id);
   };
+
+  const copyDeeplinkUrl = async () => {
+    await Clipboard.setStringAsync(`myapp://?id=${placeDetail.id}`);
+    Alert.alert("Copied to clipboard", "You can now paste the link in chrome to open the app");
+  }
 
   return (
     <ParallaxScrollView
@@ -48,6 +54,7 @@ export default function DetailPage() {
       <Recommendation category={placeDetail.category} />
 
       <Button onPress={handleUnvisited} title="Mark place as unvisited"></Button>
+      <Button onPress={copyDeeplinkUrl} title="Share"></Button>
     </ParallaxScrollView>
   );
 }
