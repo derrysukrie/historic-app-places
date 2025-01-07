@@ -9,12 +9,12 @@ export const Places = () => {
   const router = useRouter();
   const { places, toggleVisited } = useContext(HistoricalPlacesContext);
 
-  const toDetailPlace = (index: number) => {
+  const toDetailPlace = (id: number, index: number) => {
     toggleVisited(places[index].id);
 
     router.push({
-      pathname: "/detail",
-      params: { data: String(index) },
+      pathname: "/detail/[id]",
+      params: { id, data: String(index) },
     });
   };
 
@@ -27,7 +27,7 @@ export const Places = () => {
         data={places}
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item, index }) => (
-          <Pressable onPress={() => toDetailPlace(index)}>
+          <Pressable onPress={() => toDetailPlace(item.id,index)}>
             <ThemedView style={{ position: "relative" }}>
               <Image source={item.image} style={{ width: "100%", borderRadius: 10, height: 140 }} />
               <View style={styles.overlay} />

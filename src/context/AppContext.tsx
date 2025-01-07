@@ -14,6 +14,7 @@ export type HistoricalPlace = {
     nearest_city: string;
   };
   image: string;
+  link: string;
   description: string;
   established: string;
   type: string;

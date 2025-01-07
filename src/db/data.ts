@@ -21,7 +21,7 @@ interface HistoricalPlace {
 
 export const historicalPlaces: HistoricalPlace[] = [
   {
-    id: 1,
+    id: 0,
     name: "Great Wall of China",
     location: {
       country: "China",
@@ -41,7 +41,7 @@ export const historicalPlaces: HistoricalPlace[] = [
     visited: false,
   },
   {
-    id: 2,
+    id: 1,
     name: "Machu Picchu",
     location: {
       country: "Peru",
@@ -61,7 +61,7 @@ export const historicalPlaces: HistoricalPlace[] = [
     visited: false,
   },
   {
-    id: 3,
+    id: 2,
     name: "Taj Mahal",
     location: {
       country: "India",
@@ -81,7 +81,7 @@ export const historicalPlaces: HistoricalPlace[] = [
     visited: false,
   },
   {
-    id: 1123,
+    id: 3,
     name: "Colosseum",
     location: {
       country: "Italy",
@@ -101,7 +101,7 @@ export const historicalPlaces: HistoricalPlace[] = [
     visited: false,
   },
   {
-    id: 31,
+    id: 4,
     name: "Petra",
     location: {
       country: "Jordan",
@@ -121,7 +121,7 @@ export const historicalPlaces: HistoricalPlace[] = [
     visited: false,
   },
   {
-    id: 442,
+    id: 5,
     name: "Pyramids of Giza",
     location: {
       country: "Egypt",
@@ -141,7 +141,7 @@ export const historicalPlaces: HistoricalPlace[] = [
     visited: false,
   },
   {
-    id: 923,
+    id: 6,
     name: "Angkor Wat",
     location: {
       country: "Cambodia",
@@ -161,7 +161,7 @@ export const historicalPlaces: HistoricalPlace[] = [
     visited: false,
   },
   {
-    id: 5212,
+    id: 7,
     name: "Stonehenge",
     location: {
       country: "United Kingdom",
@@ -181,7 +181,7 @@ export const historicalPlaces: HistoricalPlace[] = [
     visited: false,
   },
   {
-    id: 59001,
+    id: 8,
     name: "Alhambra",
     location: {
       country: "Spain",
@@ -201,7 +201,7 @@ export const historicalPlaces: HistoricalPlace[] = [
     visited: false,
   },
   {
-    id: 9123,
+    id: 9,
     name: "Chichen Itza",
     location: {
       country: "Mexico",

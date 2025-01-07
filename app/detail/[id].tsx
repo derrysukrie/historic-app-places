@@ -1,4 +1,4 @@
-import { StyleSheet, ScrollView, Button, View } from "react-native";
+import { StyleSheet, ScrollView, Button, View, Linking, Pressable } from "react-native";
 
 import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { ThemedText } from "@/components/ThemedText";
@@ -10,16 +10,12 @@ import { useContext } from "react";
 
 export default function Page() {
   const { data } = useLocalSearchParams<{ data: string }>();
-  const { toggleVisited, places } = useContext(HistoricalPlacesContext);
+  const { places } = useContext(HistoricalPlacesContext);
   const placeDetail = places[Number(data)];
-
-  // useFocusEffect(
-  //   useCallback(() => {
-  //     console.log("Focused on detail page");
-  //     toggleVisited(placeDetail.id);
-  //     return () => {};
-  //   }, [])
-  // );
+  
+  const toWiki = () => {
+    Linking.openURL(placeDetail.link);
+  };
 
   return (
     <ParallaxScrollView
@@ -32,7 +28,11 @@ export default function Page() {
         </View>
       )}
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="link">{placeDetail.name}</ThemedText>
+        <Pressable onPress={toWiki}>
+          <ThemedText style={{ textDecorationLine: "underline" }} type="link">
+            {placeDetail.name}
+          </ThemedText>
+        </Pressable>
         {/* <HelloWave /> */}
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
