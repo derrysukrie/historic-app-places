@@ -38,7 +38,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
 
   // Function to toggle the visited status
   const toggleVisited = (placeId: number) => {
-    setPlaces((prevPlaces) => prevPlaces.map((place) => (place.id === placeId ? { ...place, visited: !place.visited } : place)));
+    setPlaces((prevPlaces) => prevPlaces.map((place) => (place.id === placeId ? { ...place, visited: true } : place)));
   };
 
   return <HistoricalPlacesContext.Provider value={{ places, toggleVisited }}>{children}</HistoricalPlacesContext.Provider>;
