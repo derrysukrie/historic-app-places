@@ -43,13 +43,13 @@ const styles = StyleSheet.create({
     lineHeight: 32,
   },
   subtitle: {
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: 500,
   },
   link: {
     lineHeight: 26,
     fontWeight: 600,
-    fontSize: 26,
+    fontSize: 22,
     color: "#0a7ea4",
   },
 });

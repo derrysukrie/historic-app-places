@@ -17,6 +17,7 @@ interface HistoricalPlace {
   type: string;
   status: string;
   visited: boolean;
+  category: "Stone" | "Building";
 }
 
 export const historicalPlaces: HistoricalPlace[] = [
@@ -39,6 +40,7 @@ export const historicalPlaces: HistoricalPlace[] = [
     type: "Fortification",
     status: "UNESCO World Heritage Site",
     visited: false,
+    category: "Stone"
   },
   {
     id: 1,
@@ -59,6 +61,7 @@ export const historicalPlaces: HistoricalPlace[] = [
     type: "Citadel",
     status: "UNESCO World Heritage Site",
     visited: false,
+    category: "Stone"
   },
   {
     id: 2,
@@ -79,6 +82,7 @@ export const historicalPlaces: HistoricalPlace[] = [
     type: "Mausoleum",
     status: "UNESCO World Heritage Site",
     visited: false,
+    category: "Building"
   },
   {
     id: 3,
@@ -99,6 +103,7 @@ export const historicalPlaces: HistoricalPlace[] = [
     type: "Amphitheater",
     status: "UNESCO World Heritage Site",
     visited: false,
+    category: "Building",
   },
   {
     id: 4,
@@ -119,6 +124,7 @@ export const historicalPlaces: HistoricalPlace[] = [
     type: "Archaeological Site",
     status: "UNESCO World Heritage Site",
     visited: false,
+    category: "Stone"
   },
   {
     id: 5,
@@ -139,6 +145,7 @@ export const historicalPlaces: HistoricalPlace[] = [
     type: "Tomb",
     status: "UNESCO World Heritage Site",
     visited: false,
+    category: "Stone"
   },
   {
     id: 6,
@@ -159,6 +166,7 @@ export const historicalPlaces: HistoricalPlace[] = [
     type: "Temple Complex",
     status: "UNESCO World Heritage Site",
     visited: false,
+    category: "Building"
   },
   {
     id: 7,
@@ -179,6 +187,7 @@ export const historicalPlaces: HistoricalPlace[] = [
     type: "Monument",
     status: "UNESCO World Heritage Site",
     visited: false,
+    category: "Stone"
   },
   {
     id: 8,
@@ -199,6 +208,7 @@ export const historicalPlaces: HistoricalPlace[] = [
     type: "Palace Complex",
     status: "UNESCO World Heritage Site",
     visited: false,
+    category: "Building"
   },
   {
     id: 9,
@@ -219,5 +229,6 @@ export const historicalPlaces: HistoricalPlace[] = [
     type: "Archaeological Site",
     status: "UNESCO World Heritage Site",
     visited: false,
+    category: "Stone"
   },
 ];

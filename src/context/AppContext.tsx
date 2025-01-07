@@ -20,6 +20,7 @@ export type HistoricalPlace = {
   type: string;
   status: string;
   visited: boolean;
+  category: "Stone" | "Building";
 }
 
 // Define the context data and methods
