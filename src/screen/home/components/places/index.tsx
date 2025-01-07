@@ -22,7 +22,7 @@ export const Places = () => {
     <ThemedView>
       <FlatList
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{ paddingBottom: 560 }}
+        contentContainerStyle={{ paddingBottom: 500 }}
         ItemSeparatorComponent={() => <ThemedView style={{ height: 20 }} />}
         data={places}
         keyExtractor={(item) => item.id.toString()}
