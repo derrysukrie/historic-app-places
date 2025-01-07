@@ -1,4 +1,4 @@
-import { StyleSheet, Button, View, Linking, Pressable } from "react-native";
+import { StyleSheet, View, Linking, Pressable, Button } from "react-native";
 
 import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { ThemedText } from "@/components/ThemedText";
@@ -35,7 +35,7 @@ export default function DetailPage() {
           </ThemedText>
         </Pressable>
         {placeDetail?.visited && (
-          <View style={{ backgroundColor: "#329ee6", borderRadius: 5, maxWidth: 80 }}>
+          <View style={{ backgroundColor: "#329ee6", borderRadius: 5, paddingHorizontal: 10, maxWidth: 80 }}>
             <ThemedText style={{ textAlign: "center", color: "#fff", fontSize: 14, fontWeight: 600 }}>Visited</ThemedText>
           </View>
         )}
@@ -45,8 +45,9 @@ export default function DetailPage() {
         <ThemedText type="subtitle">Built in {placeDetail?.established}</ThemedText>
         <ThemedText type="default">Status: {placeDetail?.status}</ThemedText>
       </ThemedView>
-      {/* <Button onPress={handleUnvisited} title="Mark place as unvisited"></Button> */}
       <Recommendation category={placeDetail.category} />
+
+      <Button onPress={handleUnvisited} title="Mark place as unvisited"></Button>
     </ParallaxScrollView>
   );
 }

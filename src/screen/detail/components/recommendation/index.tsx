@@ -1,13 +1,24 @@
 import { ThemedView } from "@/components/ThemedView";
 import { HistoricalPlacesContext } from "@/src/context/AppContext";
 import { Image } from "expo-image";
+import { useRouter } from "expo-router";
 import { useContext } from "react";
-import { FlatList, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { FlatList, Pressable, StyleSheet, Text, View } from "react-native";
 
 export const Recommendation = (props: { category: "Stone" | "Building" }) => {
-  const { places } = useContext(HistoricalPlacesContext);
+  const { places, toggleVisited } = useContext(HistoricalPlacesContext);
+  const router = useRouter();
 
-  const filteredPlaces = places.filter((place, idx) => place.category?.includes(props.category));
+  const filteredPlaces = places.filter((place) => place.category?.includes(props.category));
+
+  const toDetailPlace = (id: number, index: number) => {
+    toggleVisited(id);
+
+    router.replace({
+      pathname: "/detail/[id]",
+      params: { id, data: String(id) },
+    });
+  };
 
   return (
     <View>
@@ -21,7 +32,7 @@ export const Recommendation = (props: { category: "Stone" | "Building" }) => {
         data={filteredPlaces}
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item, index }) => (
-          <Pressable>
+          <Pressable onPress={() => toDetailPlace(item.id, index)}>
             <ThemedView style={{ position: "relative" }}>
               <Image source={item.image} style={{ width: 180, borderRadius: 10, height: 100 }} />
               <View style={styles.overlay} />
