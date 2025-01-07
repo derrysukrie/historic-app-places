@@ -15,7 +15,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.derrysukrie.myapp"
     },
     "web": {
       "bundler": "metro",
@@ -44,6 +45,12 @@
       "eas": {
         "projectId": "cebec9aa-d41c-4e20-82fa-9d50b9252fe3"
       }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/cebec9aa-d41c-4e20-82fa-9d50b9252fe3"
     }
   }
 }

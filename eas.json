@@ -4,6 +4,11 @@
     "appVersionSource": "remote"
   },
   "build": {
+    "local": {
+      "distribution": "internal",
+      "channel": "local",
+      "developmentClient": true
+    },
     "development": {
       "distribution": "internal",
       "android": {
